@@ -10,6 +10,14 @@
     "test:coverage": "jest --coverage --watchAll=false",
     "test:watch": "jest --watch"
   },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "dotenv-webpack": "^2.0.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
+    "styled-components": "^5.1.1"
+  },
   "devDependencies": {
     "@pmmmwh/react-refresh-webpack-plugin": "^0.4.1",
     "@testing-library/jest-dom": "^5.11.1",
@@ -51,14 +59,6 @@
     "webpack": "^4.44.0",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
-  },
-  "dependencies": {
-    "dotenv": "^8.2.0",
-    "dotenv-webpack": "^2.0.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-router-dom": "^5.2.0",
-    "styled-components": "^5.1.1"
   },
   "jest": {
     "collectCoverageFrom": [
