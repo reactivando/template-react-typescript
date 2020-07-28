@@ -1,0 +1,69 @@
+{
+  "name": "zagaflix",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --mode production --config webpack.ts",
+    "start": "webpack-dev-server --mode development --open --config webpack.ts",
+    "test": "jest",
+    "test:coverage": "jest --coverage --watchAll=false",
+    "test:watch": "jest --watch"
+  },
+  "devDependencies": {
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.4.1",
+    "@testing-library/jest-dom": "^5.11.1",
+    "@testing-library/react": "^10.4.7",
+    "@testing-library/react-hooks": "^3.4.1",
+    "@types/dotenv": "^8.2.0",
+    "@types/html-webpack-plugin": "^3.2.3",
+    "@types/jest": "^26.0.7",
+    "@types/react": "^16.9.43",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-router-dom": "^5.1.5",
+    "@types/react-test-renderer": "^16.9.2",
+    "@types/styled-components": "^5.1.1",
+    "@types/webpack": "^4.41.21",
+    "@typescript-eslint/eslint-plugin": "^3.7.1",
+    "@typescript-eslint/parser": "^3.7.1",
+    "awesome-typescript-loader": "^5.2.1",
+    "css-loader": "^4.0.0",
+    "eslint": "^7.5.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-import-resolver-typescript": "^2.0.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jsx-a11y": "^6.3.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.3.0",
+    "jest": "^26.1.0",
+    "prettier": "^2.0.5",
+    "react-refresh": "^0.8.3",
+    "react-test-renderer": "^16.13.1",
+    "style-loader": "^1.2.1",
+    "ts-jest": "^26.1.4",
+    "ts-node": "^8.10.2",
+    "tsconfig-paths-webpack-plugin": "^3.2.0",
+    "typescript": "^3.9.7",
+    "webpack": "^4.44.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "dotenv-webpack": "^2.0.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
+    "styled-components": "^5.1.1"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/pages/**/*.tsx",
+      "src/components/**/*.tsx"
+    ]
+  }
+}
