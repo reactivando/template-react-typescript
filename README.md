@@ -28,7 +28,7 @@
   <a href="#ℹ%EF%B8%8F-about">About</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-packages">Packages</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-getting-started">Getting started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#%EF%B8%8F-customize-customize">Customize</a>
+  <a href="#%EF%B8%8F-customize">Customize</a>
 </p>
 
 ## ℹ️ About
