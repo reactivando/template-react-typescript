@@ -28,6 +28,7 @@
     "prettier/prettier": "error",
     "react/jsx-props-no-spreading": "off",
     "react/prop-types": "off",
+    "no-underscore-dangle": "off",
     "react/jsx-one-expression-per-line": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
@@ -35,6 +36,7 @@
     "no-unused-expressions": "off",
     "import/no-unresolved": "off",
     "import/prefer-default-export": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "import/extensions": [
       "error",

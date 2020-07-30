@@ -4,8 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "webpack --mode production --config webpack.ts",
     "start": "webpack-dev-server --mode development --open --config webpack.ts",
+    "build": "webpack --mode production --config webpack.ts",
+    "postbuild": "react-snap",
     "test": "jest",
     "test:coverage": "jest --coverage --watchAll=false",
     "test:watch": "jest --watch"
@@ -15,6 +16,7 @@
     "dotenv-webpack": "^2.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-prerendered-component": "^1.2.4",
     "react-router-dom": "^5.2.0",
     "styled-components": "^5.1.1"
   },
@@ -50,6 +52,7 @@
     "jest": "^26.1.0",
     "prettier": "^2.0.5",
     "react-refresh": "^0.8.3",
+    "react-snap": "^1.23.0",
     "react-test-renderer": "^16.13.1",
     "style-loader": "^1.2.1",
     "ts-jest": "^26.1.4",
@@ -65,5 +68,9 @@
       "src/pages/**/*.tsx",
       "src/components/**/*.tsx"
     ]
+  },
+  "reactSnap": {
+    "inlineCss": true,
+    "source": "./dist"
   }
 }

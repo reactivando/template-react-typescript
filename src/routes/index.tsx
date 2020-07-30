@@ -1,8 +1,10 @@
-import React, { lazy, Suspense } from 'react';
+import React, { Suspense } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
-const Example = lazy(() => import('@pages/Example'));
-const GenericNotFound = lazy(() => import('@pages/GenericNotFound'));
+import { prerenderedLazy } from '@utils/prerenderedLazy';
+
+const Example = prerenderedLazy(() => import('@pages/Example'));
+const GenericNotFound = prerenderedLazy(() => import('@pages/GenericNotFound'));
 
 const Routes: React.FC = () => {
   return (
