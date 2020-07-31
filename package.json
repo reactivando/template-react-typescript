@@ -49,7 +49,9 @@
     "eslint-plugin-react-hooks": "^4",
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.3.0",
+    "husky": "^4.2.5",
     "jest": "^26.1.0",
+    "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
     "react-refresh": "^0.8.3",
     "react-snap": "^1.23.0",
@@ -72,5 +74,11 @@
   "reactSnap": {
     "inlineCss": true,
     "source": "./dist"
+  },
+  "lint-staged": {
+    "*.{js,json,jsx,ts,tsx}": [
+      "eslint",
+      "prettier --check"
+    ]
   }
 }
