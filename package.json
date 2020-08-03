@@ -73,7 +73,11 @@
   },
   "reactSnap": {
     "inlineCss": true,
-    "source": "./dist"
+    "source": "./dist",
+    "puppeteerArgs": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox"
+    ]
   },
   "lint-staged": {
     "*.{js,json,jsx,ts,tsx}": [
