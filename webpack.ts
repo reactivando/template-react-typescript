@@ -28,9 +28,11 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
+        test: /\.(js|ts|tsx)$/,
         exclude: /node_modules/,
-        loader: 'awesome-typescript-loader',
+        use: {
+          loader: 'babel-loader',
+        },
       },
       {
         test: /\.css/,
