@@ -24,6 +24,9 @@ const config = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json'],
     plugins: [new TsconfigPathsPlugin({ configFile: './tsconfig.json' })],
+    alias: {
+      '@': path.join(__dirname, 'src')
+    }
   },
 
   module: {
@@ -37,7 +40,10 @@ const config = {
       },
       {
         test: /\.css/,
-        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
+        use: [
+          { loader: 'style-loader' },
+          { loader: 'css-loader', options: { modules: true } }
+        ],
       },
       {
         test: /.*\.(gif|png|jpe?g)$/i,
@@ -52,6 +58,10 @@ const config = {
     historyApiFallback: true,
     hot: true,
     port: 3000,
+  },
+  externals: {
+    react: 'React',
+    'react-dom': 'ReactDOM'
   },
   plugins: [
     htmlPlugin,

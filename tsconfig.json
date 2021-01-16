@@ -14,14 +14,11 @@
     "isolatedModules": false,
     "noEmit": true,
     "outDir": "./dist/",
-    "jsx": "react",
+    "jsx": "react-jsx",
     "noImplicitAny": true,
     "baseUrl": "./src",
     "paths": {
-      "@components/*": ["components/*"],
-      "@pages/*": ["pages/*"],
-      "@styles/*": ["styles/*"],
-      "@utils/*": ["utils/*"]
+      "src/*": ["*"]
     }
   },
   "include": ["./src/**/*"]
