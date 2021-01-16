@@ -1,6 +1,4 @@
-import React from 'react';
-
-import TextExample from '@components/TextExample';
+import TextExample from 'src/components/TextExample';
 
 import { Container } from './styles';
 
