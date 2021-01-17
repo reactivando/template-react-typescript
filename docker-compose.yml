@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  nginx:
+    build: .
+    ports:
+      - 80:80
+    restart: always

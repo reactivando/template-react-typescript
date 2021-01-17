@@ -28,7 +28,8 @@
   <a href="#ℹ%EF%B8%8F-about">About</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-packages">Packages</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-getting-started">Getting started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#%EF%B8%8F-customize">Customize</a>
+  <a href="#%EF%B8%8F-customize">Customize</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-deploy">Deploy</a>
 </p>
 
 ## ℹ️ About
@@ -131,21 +132,11 @@ export default Route;
 
 </details>
 
-To create new paths with `@folder` you must change tsconfig.json and jest.config.js by adding the following lines:
+## ✈️ Deploy
 
-In tsconfig.json add lines inside the `paths` as in the example:
-
-```json
-"@styles/*": ["styles/*"],
-"@newfolder/*": ["newfolder/*"]
-```
-
-In jest.config.js add lines inside the `moduleNameMapper` as in the example:
-
-```js
-'^@styles/(.*)$': '<rootDir>/src/styles/$1',
-'^@newfolder/(.*)$': '<rootDir>/src/newfolder/$1'
-```
+I recommend deploy using `yarn build:server` script, for this your VPS need to
+have installed `docker` and `docker-compose`. This script will up a machina with
+nginx. But you are able to run `yarn build` and make your own deploy.
 
 ---
 
