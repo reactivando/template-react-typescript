@@ -1,19 +1,16 @@
-import { render, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 
 import Button from 'src/components/Button';
 
 const mockedClick = jest.fn();
 
 describe('Button Component', () => {
-  it('should be able to render Button', () => {
-    const { getByText } = render(<Button onClick={mockedClick}>Click</Button>);
+  it('should be able to render Button and click', () => {
+    render(<Button onClick={mockedClick}>Click</Button>);
 
-    const button = getByText('Click');
-
-    fireEvent.click(button);
+    userEvent.click(screen.getByText('Click'));
 
     expect(mockedClick).toHaveBeenCalled();
   });
 });
-
-export {};
