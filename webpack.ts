@@ -1,4 +1,5 @@
 require('dotenv').config();
+const webpack = require("webpack");
 const Dotenv = require('dotenv-webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -34,9 +35,14 @@ const config = {
       {
         test: /\.(js|ts|tsx)$/,
         exclude: /node_modules/,
-        use: {
+        use: [{
           loader: 'babel-loader',
-        },
+          options: {
+            plugins: [
+              isDevelopment && require.resolve('react-refresh/babel'),
+            ].filter(Boolean),
+          },
+        }],
       },
       {
         test: /\.css/,
@@ -56,7 +62,6 @@ const config = {
   devServer: {
     contentBase: path.join(__dirname, 'public'),
     historyApiFallback: true,
-    hot: true,
     port: 3000,
   },
   externals: {
@@ -66,6 +71,7 @@ const config = {
   plugins: [
     htmlPlugin,
     new Dotenv(),
+    isDevelopment && new webpack.HotModuleReplacementPlugin(),
     isDevelopment && new ReactRefreshWebpackPlugin(),
   ].filter(Boolean),
 };
