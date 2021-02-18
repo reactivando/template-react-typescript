@@ -25,7 +25,7 @@ const config = {
     extensions: ['.ts', '.tsx', '.js', '.json'],
     plugins: [new TsconfigPathsPlugin({ configFile: './tsconfig.json' })],
     alias: {
-      '@': path.join(__dirname, 'src')
+      'src': path.join(__dirname, 'src')
     }
   },
 
