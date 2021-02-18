@@ -78,15 +78,6 @@
       "src/components/**/*.tsx"
     ]
   },
-  "reactSnap": {
-    "inlineCss": true,
-    "source": "./dist",
-    "puppeteerArgs": [
-      "--no-sandbox",
-      "--disable-setuid-sandbox"
-    ],
-    "puppeteerExecutablePath": "/usr/bin/google-chrome-unstable"
-  },
   "lint-staged": {
     "*.{js,json,jsx,ts,tsx}": [
       "eslint",
