@@ -53,9 +53,12 @@ const config = {
       },
       {
         test: /.*\.(gif|png|jpe?g)$/i,
-        use: {
-          loader: 'file-loader',
-        },
+        type: 'asset/resource'
+      },
+      {
+        test: /\.svg$/,
+        use: ['@svgr/webpack', 'url-loader'],
+        type: 'javascript/auto'
       },
     ],
   },
