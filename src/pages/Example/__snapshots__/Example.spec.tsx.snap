@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Example Page should render correcty 1`] = `
+<div
+  className="sc-bdnxRM glafIp"
+>
+  <h1>
+    Example
+  </h1>
+</div>
+`;
