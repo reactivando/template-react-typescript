@@ -1,8 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Button Component should render correcty 1`] = `
+.c0 {
+  background-color: #2e2e2e;
+  color: #fff;
+}
+
 <button
-  className="sc-bdnxRM cupUVD"
+  className="c0"
   onClick={[MockFunction]}
 >
   Button

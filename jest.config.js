@@ -9,6 +9,7 @@ module.exports = {
   setupFilesAfterEnv: [
     '@testing-library/jest-dom/extend-expect',
     'dotenv/config',
+    '<rootDir>/src/setupTests.ts'
   ],
   testEnvironment: 'jsdom',
   testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$',
