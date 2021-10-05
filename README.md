@@ -11,7 +11,7 @@
 
   <img alt="Repo size" src="https://img.shields.io/github/repo-size/azagatti/template-react-typescript?style=plastic">
 
-  <a href="https://github.com/AZagatti/template-react-typescript/commits/master">
+  <a href="https://github.com/AZagatti/template-react-typescript/commits/main">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/azagatti/template-react-typescript?style=plastic">
   </a>
 
