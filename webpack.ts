@@ -11,6 +11,10 @@ const htmlPlugin = new HtmlWebpackPlugin({
   template: path.resolve(__dirname, 'public', 'index.html'),
 });
 
+const dotEnv = new Dotenv({
+  defaults: true,
+})
+
 const isDevelopment = process.env.NODE_ENV !== 'production';
 
 const config = {
@@ -35,14 +39,14 @@ const config = {
       {
         test: /\.(js|ts|tsx)$/,
         exclude: /node_modules/,
-        use: [{
-          loader: 'babel-loader',
-          options: {
-            plugins: [
-              isDevelopment && require.resolve('react-refresh/babel'),
-            ].filter(Boolean),
-          },
-        }],
+        use: [
+          {
+            loader: require.resolve('babel-loader'),
+            options: {
+              plugins: [isDevelopment && require.resolve('react-refresh/babel')].filter(Boolean),
+            },
+         }
+        ],
       },
       {
         test: /\.css/,
@@ -67,7 +71,14 @@ const config = {
     ],
   },
   devServer: {
-    contentBase: path.join(__dirname, 'public'),
+    static: [
+      {
+        directory: path.join(__dirname, 'public'),
+      },
+      {
+        directory: path.join(__dirname, 'src'),
+      }
+    ],
     historyApiFallback: true,
     port: 3000,
   },
@@ -77,8 +88,7 @@ const config = {
   },
   plugins: [
     htmlPlugin,
-    new Dotenv(),
-    isDevelopment && new webpack.HotModuleReplacementPlugin(),
+    dotEnv,
     isDevelopment && new ReactRefreshWebpackPlugin(),
   ].filter(Boolean),
 };

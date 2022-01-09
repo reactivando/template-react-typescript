@@ -1,12 +1,15 @@
-import { BrowserRouter as Router } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
+import ErrorBoundary from './routes/components/ErrorBoundary'
 import { Routes } from './routes/Routes'
 import GlobalStyle from './styles/global'
 
 export const App = () => {
   return (
-    <Router>
+    <BrowserRouter>
       <GlobalStyle />
-      <Routes />
-    </Router>
+      <ErrorBoundary>
+        <Routes />
+      </ErrorBoundary>
+    </BrowserRouter>
   )
 }

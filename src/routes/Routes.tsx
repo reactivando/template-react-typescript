@@ -1,26 +1,20 @@
-import { lazy, Suspense } from 'react'
-import { Switch, Route, Redirect } from 'react-router-dom'
-
-const Example = lazy(() =>
-  import('src/pages/Example/Example').then(module => ({
-    default: module.Example,
-  })),
-)
-const GenericNotFound = lazy(() =>
-  import('src/pages/GenericNotFound/GenericNotFound').then(module => ({
-    default: module.GenericNotFound,
-  })),
-)
+import { Suspense } from 'react'
+import {
+  Navigate,
+  Route,
+  Routes as RoutesReactRouterDom,
+} from 'react-router-dom'
+import { Example, GenericNotFound } from './paths'
 
 export const Routes = () => {
   return (
-    <Suspense fallback={<p>Carregando...</p>}>
-      <Switch>
-        <Route exact path="/" component={Example} />
+    <Suspense fallback={<p>carregando</p>}>
+      <RoutesReactRouterDom>
+        <Route path="/" element={<Example />} />
 
-        <Route path="/404" component={GenericNotFound} />
-        <Redirect to="/404" />
-      </Switch>
+        <Route path="*" element={<Navigate to="/404" />} />
+        <Route path="/404" element={<GenericNotFound />} />
+      </RoutesReactRouterDom>
     </Suspense>
   )
 }
