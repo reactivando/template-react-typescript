@@ -4,8 +4,8 @@
   "main": "src/index.tsx",
   "license": "MIT",
   "scripts": {
-    "start": "NODE_ENV=development webpack serve --mode development --open --config webpack.ts",
-    "build": "NODE_ENV=production webpack --mode production --config webpack.ts",
+    "start": "webpack serve --mode development --open --config webpack.ts",
+    "build": "webpack --mode production --config webpack.ts",
     "build:server": "docker-compose build & docker run --name $npm_package_name -p 80:80 -d $npm_package_name\\_nginx",
     "test": "jest",
     "test:coverage": "jest --coverage --watchAll=false",
@@ -17,7 +17,7 @@
     "dotenv-webpack": "^7.0.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-router-dom": "^5.3.0",
+    "react-router-dom": "^6.2.1",
     "styled-components": "^5.3.1"
   },
   "devDependencies": {
@@ -27,7 +27,7 @@
     "@babel/preset-react": "^7.14.5",
     "@babel/preset-typescript": "^7.15.0",
     "@babel/runtime": "^7.15.4",
-    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.1",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.4",
     "@svgr/webpack": "^5.5.0",
     "@testing-library/dom": "^8.7.2",
     "@testing-library/jest-dom": "^5.14.1",
@@ -64,7 +64,7 @@
     "jest-styled-components": "^7.0.5",
     "lint-staged": "^11.2.0",
     "prettier": "^2.4.1",
-    "react-refresh": "^0.10.0",
+    "react-refresh": "^0.11.0",
     "react-test-renderer": "^17.0.2",
     "style-loader": "^3.3.0",
     "ts-jest": "^27.0.5",

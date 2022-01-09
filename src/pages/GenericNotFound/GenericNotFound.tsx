@@ -1,3 +1,3 @@
 export const GenericNotFound = () => {
-  return <p>404 - Not Found</p>
+  return <p>404 - Not found</p>
 }
